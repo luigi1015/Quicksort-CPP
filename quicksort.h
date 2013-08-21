@@ -6,5 +6,5 @@ namespace quicksort
 
 	template <class T> int partition( std::vector<T> &items, int leftIndex, int rightIndex, int pivotIndex );
 
-	template <class T> void quicksort( std::vector<T> &items, int left, int right );
+	template <class T> void quickSort( std::vector<T> &items, int left, int right );
 }

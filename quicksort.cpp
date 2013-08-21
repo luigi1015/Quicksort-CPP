@@ -54,7 +54,7 @@ namespace quicksort
 		return newIndex;
 	}
 
-	template <class T> void quicksort( std::vector<T> &items, int left, int right )
+	template <class T> void quickSort( std::vector<T> &items, int left, int right )
 	{//Main quicksort function. Call this to sort a list of items.
 		int pivotPoint, newPivotPoint;
 		if( left < right )
