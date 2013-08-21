@@ -25,7 +25,7 @@ int main( int argc, const char* argv[] )
 	printVector<int>(A);
 	std::cout << std::endl;
 	
-	quicksort::quicksort<int>(A, 0, A.size()-1);
+	quicksort::quickSort<int>(A, 0, A.size()-1);
 	
 	std::cout << "After sort:" << std::endl;
 	printVector<int>(A);

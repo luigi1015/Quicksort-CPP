@@ -61,8 +61,8 @@ namespace quicksort
 		{//If the list has at least 2 more items, keep running quicksort.
 			pivotPoint = getMedianIndex( items, left, (left+right)/2, right );//Get the median of the left, middle and right.
 			newPivotPoint = partition( items, left, right, pivotPoint );
-			quicksort( items, left, newPivotPoint - 1 );
-			quicksort( items, newPivotPoint + 1, right );
+			quickSort( items, left, newPivotPoint - 1 );
+			quickSort( items, newPivotPoint + 1, right );
 		}
 	}
 }
