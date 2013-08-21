@@ -4,19 +4,19 @@ namespace quicksort
 {
 	template <class T> int getMedianIndex( std::vector<T> &items, int firstIndex, int secondIndex, int thirdIndex )
 	{//Returns the index of the median value of the values at the three indexes or thirdIndex.
-		if( (items[firstIndex] <= items[secondIndex]) && (items[firstIndex] >= items[thirdIndex]) )
+		if( (items.at(firstIndex) <= items.at(secondIndex)) && (items.at(firstIndex) >= items.at(thirdIndex)) )
 		{//The object at firstIndex is a median of the three because it's less than or equal to the object at secondIndex and greater than or equal to the object at thirdIndex. Since it counts as a median, return it.
 			return firstIndex;
 		}
-		else if( (items[firstIndex] >= items[secondIndex]) && (items[firstIndex] <= items[thirdIndex]) )
+		else if( (items.at(firstIndex) >= items.at(secondIndex)) && (items.at(firstIndex) <= items.at(thirdIndex)) )
 		{//The object at firstIndex is a median of the three because it's greater than or equal to the object at secondIndex and less than or equal to the object at thirdIndex. Since it counts as a median, return it.
 			return firstIndex;
 		}
-		else if( (items[secondIndex] <= items[firstIndex]) && (items[secondIndex] >= items[thirdIndex]) )
+		else if( (items.at(secondIndex) <= items.at(firstIndex)) && (items.at(secondIndex) >= items.at(thirdIndex)) )
 		{//The object at secondIndex is a median of the three because it's less than or equal to the object at firstIndex and greater than or equal to the object at thirdIndex. Since it counts as a median, return it.
 			return secondIndex;
 		}
-		else if( (items[secondIndex] >= items[firstIndex]) && (items[secondIndex] <= items[thirdIndex]) )
+		else if( (items.at(secondIndex) >= items.at(firstIndex)) && (items.at(secondIndex) <= items.at(thirdIndex)) )
 		{//The object at secondIndex is a median of the three because it's greater than or equal to the object at firstIndex and less than or equal to the object at thirdIndex. Since it counts as a median, return it.
 			return secondIndex;
 		}
@@ -28,20 +28,20 @@ namespace quicksort
 
 	template <class T> void swap( std::vector<T> &items, int firstIndex, int secondIndex )
 	{//Swap items at first and second index.
-		T tempVal = items[firstIndex];
-		items[firstIndex] = items[secondIndex];
-		items[secondIndex] = tempVal;
+		T tempVal = items.at(firstIndex);
+		items.at(firstIndex) = items.at(secondIndex);
+		items.at(secondIndex) = tempVal;
 	}
 
 	template <class T> int partition( std::vector<T> &items, int leftIndex, int rightIndex, int pivotIndex )
 	{//Sort from left to right around pivot.
 		int newIndex = leftIndex;
-		T pivVal = items[pivotIndex];
+		T pivVal = items.at(pivotIndex);
 		swap(items, pivotIndex, rightIndex );
 
 		for( int i = leftIndex; i < rightIndex; i++ )
 		{
-			if( items[i] < pivVal )
+			if( items.at(i) < pivVal )
 			{//If the element at index i is less than the pivot value, it should be before the pivot, so switch it.
 				swap( items, i, newIndex );
 				newIndex++;
