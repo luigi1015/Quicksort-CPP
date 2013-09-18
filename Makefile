@@ -1,10 +1,10 @@
-all: Quicksort
+all: quicksort.o Test
 
-Quicksort: quicksort.cpp quicksort.h
+quicksort.o: quicksort.cpp
 	g++ -Wall -c quicksort.cpp
 
-Test: quicksort.cpp quicksort.h test.cpp
-	g++ -Wall -o Test quicksort.cpp test.cpp
+Test: quicksort.o quicksortTest.cpp quicksortTest.h
+	g++ -Wall -o Test quicksortTest.cpp quicksortTest.h quicksort.o -lcppunit
 
 clean:
-	rm Test *~
+	rm Test *~ *.o *.gch

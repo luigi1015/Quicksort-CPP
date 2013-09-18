@@ -1,6 +1,5 @@
 #include <vector>
-#include "quicksort.h"
-namespace quicksort
+namespace QuickSort
 {
 	template <class T> int getMedianIndex( std::vector<T> &items, int firstIndex, int secondIndex, int thirdIndex )
 	{//Returns the index of the median value of the values at the three indexes or thirdIndex.
