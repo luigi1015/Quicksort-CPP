@@ -1,3 +1,6 @@
+#ifndef QuickSort_CPP
+#define QuickSort_CPP
+
 #include <vector>
 namespace QuickSort
 {
@@ -65,3 +68,5 @@ namespace QuickSort
 		}
 	}
 }
+
+#endif /* QuickSort_CPP */
