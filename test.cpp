@@ -1,5 +1,5 @@
 #include <vector>
-#include "quicksort.cpp"
+#include "QuickSort.cpp"
 #include <iostream>
 
 template <class T> void printVector( std::vector<T> items )

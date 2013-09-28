@@ -3,7 +3,7 @@
 #include <cppunit/TestCase.h>
 #include <cppunit/extensions/HelperMacros.h>
 #include <iostream>
-#include "quicksort.cpp"
+#include "QuickSort.cpp"
 
 class QuickSortTest : public CppUnit::TestCase 
 {
